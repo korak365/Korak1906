@@ -1,0 +1,107 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "episodes": {
+            "title": "Podcast Episodes",
+            "transformation": {
+                "fields": ["episodeId", "podcastName", "episodeTitle", "publishDate", "duration", "wordCount", "speakers"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "episodeId": {
+                        "label": "Episode ID",
+                        "format": "text"
+                    },
+                    "podcastName": {
+                        "label": "Podcast",
+                        "format": "text"
+                    },
+                    "episodeTitle": {
+                        "label": "Episode Title",
+                        "format": "text"
+                    },
+                    "publishDate": {
+                        "label": "Published",
+                        "format": "date"
+                    },
+                    "duration": {
+                        "label": "Duration",
+                        "format": "text"
+                    },
+                    "wordCount": {
+                        "label": "Words",
+                        "format": "number"
+                    },
+                    "speakers": {
+                        "label": "Speakers",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "speakers": {
+            "title": "Speakers Index",
+            "transformation": {
+                "fields": ["speakerId", "speakerName", "title", "company", "episodesCount", "totalAppearances"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "speakerId": {
+                        "label": "Speaker ID",
+                        "format": "text"
+                    },
+                    "speakerName": {
+                        "label": "Name",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "company": {
+                        "label": "Company",
+                        "format": "text"
+                    },
+                    "episodesCount": {
+                        "label": "Episodes",
+                        "format": "number"
+                    },
+                    "totalAppearances": {
+                        "label": "Appearances",
+                        "format": "number"
+                    }
+                }
+            }
+        },
+        "phrases": {
+            "title": "Key Phrases Index",
+            "transformation": {
+                "fields": ["phrase", "frequency", "episodes", "context"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "phrase": {
+                        "label": "Key Phrase",
+                        "format": "text"
+                    },
+                    "frequency": {
+                        "label": "Frequency",
+                        "format": "number"
+                    },
+                    "episodes": {
+                        "label": "Episodes",
+                        "format": "number"
+                    },
+                    "context": {
+                        "label": "Context",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

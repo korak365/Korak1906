@@ -1,0 +1,31 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the Podcast-to-Text Dataset Scraper",
+    "properties": {
+        "transcriptionsOverview": {
+            "type": "string",
+            "title": "Transcriptions Overview",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=episodes"
+        },
+        "speakersDatabase": {
+            "type": "string",
+            "title": "Speakers Database",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=speakers"
+        },
+        "keyPhrasesIndex": {
+            "type": "string",
+            "title": "Key Phrases Index",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=phrases"
+        },
+        "completeTranscriptionExport": {
+            "type": "string",
+            "title": "Complete Export",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=TRANSCRIPTIONS_EXPORT"
+        },
+        "datasetStatistics": {
+            "type": "string",
+            "title": "Dataset Statistics",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=DATASET_STATISTICS"
+        }
+    }
+}

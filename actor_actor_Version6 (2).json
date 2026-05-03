@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "podcast-to-text-dataset-scraper",
+    "title": "Podcast-to-Text Dataset Scraper",
+    "description": "Scrapes transcriptions from niche industry podcasts.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "ai-generated-actor",
+        "generatedBy": "Claude (Anthropic)"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

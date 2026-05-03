@@ -1,0 +1,104 @@
+{
+    "title": "Input schema of the Podcast-to-Text Dataset Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Podcast URLs",
+            "type": "array",
+            "description": "URLs of podcast websites or RSS feeds with transcriptions.",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://www.podcastone.com"
+                }
+            ]
+        },
+        "maxEpisodesToScrape": {
+            "title": "Max Episodes to Scrape",
+            "type": "integer",
+            "description": "Maximum number of podcast episodes to process.",
+            "default": 50
+        },
+        "podcastCategories": {
+            "title": "Podcast Categories/Industries",
+            "type": "array",
+            "description": "Filter by podcast category (Technology, Finance, Healthcare, etc.)",
+            "editor": "json",
+            "default": ["Technology", "Business", "Science"]
+        },
+        "includeTranscription": {
+            "title": "Include Full Transcription",
+            "type": "boolean",
+            "description": "Extract complete episode transcription.",
+            "default": true
+        },
+        "includeMetadata": {
+            "title": "Include Episode Metadata",
+            "type": "boolean",
+            "description": "Extract title, date, speakers, duration, description.",
+            "default": true
+        },
+        "extractTimestamps": {
+            "title": "Extract Timestamps",
+            "type": "boolean",
+            "description": "Preserve timestamp markers for each speaker turn.",
+            "default": true
+        },
+        "extractSpeakers": {
+            "title": "Extract Speaker Information",
+            "type": "boolean",
+            "description": "Identify and track different speakers in conversation.",
+            "default": true
+        },
+        "extractKeyPhrases": {
+            "title": "Extract Key Phrases",
+            "type": "boolean",
+            "description": "Auto-detect key topics and phrases discussed.",
+            "default": true
+        },
+        "extractQuotes": {
+            "title": "Extract Memorable Quotes",
+            "type": "boolean",
+            "description": "Find and extract notable quotes from episodes.",
+            "default": true
+        },
+        "cleanTranscription": {
+            "title": "Clean Transcription Text",
+            "type": "boolean",
+            "description": "Remove filler words (um, uh, like) and normalize text.",
+            "default": true
+        },
+        "includeAudio": {
+            "title": "Include Audio Metadata",
+            "type": "boolean",
+            "description": "Extract audio URL, duration, quality info.",
+            "default": true
+        },
+        "splitBySegments": {
+            "title": "Split by Segments",
+            "type": "boolean",
+            "description": "Break transcription into topic segments.",
+            "default": true
+        },
+        "minTranscriptionLength": {
+            "title": "Min Transcription Length (words)",
+            "type": "integer",
+            "description": "Skip episodes with transcriptions shorter than this.",
+            "default": 500
+        },
+        "dateRange": {
+            "title": "Date Range (recent X days)",
+            "type": "integer",
+            "description": "Only scrape episodes from last X days (0 = all).",
+            "default": 90
+        },
+        "outputFormat": {
+            "title": "Output Format",
+            "type": "string",
+            "description": "Format for transcription export.",
+            "enum": ["json", "markdown", "txt", "srt"],
+            "default": "json"
+        }
+    }
+}
